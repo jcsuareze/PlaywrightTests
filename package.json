@@ -1,0 +1,23 @@
+{
+  "name": "playwrighttests",
+  "version": "1.0.0",
+  "description": "Carpeta que contiene mini test para mejor comprension de Playwright",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcsuareze/PlaywrightTests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jcsuareze/PlaywrightTests/issues"
+  },
+  "homepage": "https://github.com/jcsuareze/PlaywrightTests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.1.0"
+  }
+}

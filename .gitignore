@@ -1,0 +1,11 @@
+
+# Playwright
+node_modules/ # Dependencias instaladas con npm
+/test-results/ # Directorio de resultados de pruebas
+/playwright-report/ # Archivos de informes de Playwright
+/blob-report/ # Archivos de informes de blobs
+/playwright/.cache/ # Caché de Playwright
+.trace # Archivos de trazas de Playwright
+.env # Variables de entorno
+.vscode/ # Configuración de Visual Studio Code, activar si es necesario
+*.log # Archivos de registro
