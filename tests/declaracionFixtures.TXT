@@ -1,0 +1,59 @@
+// Verificar tambien el archivo playwright.config.js que fue modificado para dar mas visibilidad
+
+const {test} = require('@playwright/test');
+
+test('Primera prueba de Playwright', async function(){
+
+    //Codigo de playwright
+    //En Javascript las instrucciones no se ejecutan de forma secuencial, sino que se ejecutan de forma asincrona.
+    //Por lo tanto, si queremos que se ejecute una instruccion despues de otra, debemos usar la palabra clave "await"
+
+}); // Fin de la prueba
+
+//en las nuevas versiones de Playwright, ya no es necesario usar function() para definir una prueba, se puede usar una funcion flecha
+test('Segunda prueba de Playwright', async () => {
+    //Codigo de playwright
+    //En Javascript las instrucciones no se ejecutan de forma secuencial, sino que se ejecutan de forma asincrona.
+    //Por lo tanto, si queremos que se ejecute una instruccion despues de otra, debemos usar la palabra clave "await"
+
+}); // Fin de la prueba 
+
+//Los fixtures son una forma de agrupar pruebas que comparten un mismo contexto, por ejemplo, si todas las pruebas necesitan iniciar sesión en una aplicación, se puede crear un fixture que inicie sesión antes de ejecutar las pruebas.
+// se declaran antes de las pruebas, y se pueden usar en las pruebas como argumentos de la funcion de prueba declarados con {test}.
+test.describe('Grupo de pruebas', () => {
+    //Codigo de playwright
+    //Los fixtures como {browser} se usan dentro de las pruebas individuales, no en test.describe
+    //test.describe solo agrupa las pruebas, pero no recibe fixtures directamente
+    
+    test('Prueba dentro del grupo', async ({browser}) => {
+        const context = await browser.newContext();
+        const page = await context.newPage();
+        await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+        await page.close();
+        await context.close();
+    });
+
+});
+
+//Aquí se puede ver un ejemplo de como usar los fixtures en una prueba
+test('Prueba de UI Basics', async ({browser}) => {
+
+    //chrome -plugins / cookies / etc.
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+
+
+}); // Fin de la prueba
+
+//Si no se desea usar el conext o el navegador, se puede usar el objeto page directamente
+test('Browser context', async ({browser, page}) => {
+
+    //No es necesario crear un nuevo contexto, ya que el objeto page ya tiene un contexto asociado
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+
+    //Aquí se pueden agregar más acciones con el objeto page, como hacer clic en botones, llenar formularios, etc.
+
+}); // Fin de la prueba
+
+
