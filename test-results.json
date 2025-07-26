@@ -1,0 +1,160 @@
+{
+  "config": {
+    "configFile": "C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\playwright.config.js",
+    "rootDir": "C:/Carpeta practicas/PlaywrightJavaScript/PlaywrightTests/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        {
+          "printSteps": true
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Carpeta practicas/PlaywrightJavaScript/PlaywrightTests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Carpeta practicas/PlaywrightJavaScript/PlaywrightTests/tests",
+        "testIgnore": [
+          "**/declaracionFixtures.js"
+        ],
+        "testMatch": [
+          "**/*.js"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.1",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "UIBasics.js",
+      "file": "UIBasics.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Primera prueba",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 13391,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('[style*=\\'block\\']')\nExpected string: \u001b[32m\"Incorrect username/passworf.\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[style*=\\'block\\']')\u001b[22m\n\u001b[2m    2 × locator resolved to <div class=\"alert alert-danger col-md-12\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Incorrect username/password.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('[style*=\\'block\\']')\nExpected string: \u001b[32m\"Incorrect username/passworf.\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[style*=\\'block\\']')\u001b[22m\n\u001b[2m    2 × locator resolved to <div class=\"alert alert-danger col-md-12\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Incorrect username/password.\"\u001b[22m\n\n    at C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\tests\\UIBasics.js:20:52",
+                    "location": {
+                      "file": "C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\tests\\UIBasics.js",
+                      "column": 52,
+                      "line": 20
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m    \u001b[90m// console.log(await page.locator(\"[style*='block']\").textContent());\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Verificar que el texto esperado esté presente\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[style*='block']\"\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Incorrect username/passworf.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\tests\\UIBasics.js",
+                        "column": 52,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('[style*=\\'block\\']')\nExpected string: \u001b[32m\"Incorrect username/passworf.\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[style*=\\'block\\']')\u001b[22m\n\u001b[2m    2 × locator resolved to <div class=\"alert alert-danger col-md-12\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Incorrect username/password.\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 18 |\u001b[39m    \u001b[90m// console.log(await page.locator(\"[style*='block']\").textContent());\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Verificar que el texto esperado esté presente\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[style*='block']\"\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Incorrect username/passworf.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\tests\\UIBasics.js:20:52\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-26T06:09:57.315Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\test-results\\UIBasics.js-Primera-prueba\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\test-results\\UIBasics.js-Primera-prueba\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\test-results\\UIBasics.js-Primera-prueba\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Carpeta practicas\\PlaywrightJavaScript\\PlaywrightTests\\tests\\UIBasics.js",
+                    "column": 52,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8032f26f1a219ae5e86-ce0f7c368698fe0e0746",
+          "file": "UIBasics.js",
+          "line": 9,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-26T06:09:56.324Z",
+    "duration": 15750.716,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

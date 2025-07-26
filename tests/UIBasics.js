@@ -6,18 +6,26 @@ const {expect} = require('@playwright/test');
 
 
 
-test('Primera prueba', async({browser}) =>{
+test.only('Prueba falso login ', async({browser}) =>{
 
     const context  = await browser.newContext()
     const page = await context.newPage();
     await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
+    //SELECTORES 
+    await page.locator('input#username.form-control').fill('rahulshettyacardemy');
+    await page.locator('input#password.form-control').fill('learning');
+    await page.locator('input#signInBtn.btn.btn-info.btn-md').click();
+    console.log(await page.locator("[style*='block']").textContent());
+    // Verificar que el texto esperado esté presente
+    await expect(page.locator("[style*='block']")).toHaveText('Incorrect username/password.');
+
 });
 
 //La pagina de playwright que contiene los assertions y los matchers
 //https://playwright.dev/docs/test-assertions   
 
 
-test('Segunda prueba', async({page}) =>{
+test('Prueba de pagina', async({page}) =>{
 
     await page.goto('https://google.com');
     console.log(await page.title()); // Imprime el título de la página en la consola

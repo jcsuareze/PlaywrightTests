@@ -20,12 +20,15 @@ const config = {
     timeout: 5000
   },
 
-  reporter: 'html',
+  reporter: [
+    ['html'],
+  ],
 
   use: {
 
     browserName : 'chromium', // Puede ser 'chromium', 'firefox' o 'webkit'
     headless: false, // Ejecutar en modo headless (sin interfaz gráfica)
+    //ventana maxima de 1280x720
     viewport: { width: 1280, height: 720 }, // Tamaño de la ventana del navegador
     screenshot: 'on',
     trace: 'on', // off, on
