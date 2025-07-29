@@ -9,7 +9,6 @@ const { devices } = require('@playwright/test');
  
 const config = {
   testDir: './tests/',
-  testMatch: '**/*.js',
   //no probar especificamente el archivo declaracionFixtures.js
   testIgnore: ['**/declaracionFixtures.js'],
 
