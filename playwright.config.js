@@ -30,7 +30,12 @@ const config = {
     //ventana maxima de 1280x720
     viewport: { width: 1280, height: 720 }, // Tamaño de la ventana del navegador
     screenshot: 'on',
-    trace: 'on', // off, on
+    //screenshot: 'only-on-failure', // Toma capturas de pantalla solo en caso de fallo
+    trace: 'on', // off, on  //Muestra el rastro de la ejecucion de las pruebas, para ver que paso en cada paso de la prueba, util para depurar errores
+    //trace: 'retain-on-failure', // Guarda el rastro de la ejecucion de las pruebas, para ver que paso en cada paso de la prueba, util para depurar errores
+
+    //video: 'on', // off, on, retain-on-failure // Graba un video de la ejecucion de las pruebas, util para depurar errores
+    //video: 'retain-on-failure', // Graba un video de la ejecucion de las pruebas, util para depurar errores
   },
 
 };

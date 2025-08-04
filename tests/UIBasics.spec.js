@@ -8,7 +8,7 @@ const { get } = require('http');
 
 
 
-test.only('Prueba falso login ', async({browser}) =>{
+test('Prueba falso login ', async({browser}) =>{
 
     const context  = await browser.newContext()
     const page = await context.newPage();

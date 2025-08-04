@@ -25,7 +25,7 @@ test('dropdown test, check Btn y radioButton', async({page})=>{
 
 })
 
-test.only('blinking text', async({page})=>{
+test('blinking text', async({page})=>{
    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
    const blinkLocator = page.locator('[href*="documents-request"]');
    console.log(await blinkLocator.textContent());

@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 
-test.only('Prueba varios elementos allTextContent con otra pagina (networkidle)', async({page})=>{
+test ('Prueba varios elementos allTextContent con otra pagina (networkidle)', async({page})=>{
 
     await page.goto("https://rahulshettyacademy.com/client");
     await page.locator('input#userEmail').fill("anshika@gmail.com");
